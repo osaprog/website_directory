@@ -89,7 +89,10 @@ bearer token in auth.
 - To delete a website login as admin and use the bearer token in auth
 
 ### Further improvments and consideration:
-- Import and index other database models in the search engine to improve query performance.
-- Consider expanding test coverage by writing additional scenarios.
-- Develop the frontend using Vue.js or another suitable framework.
+- Import and index additional database models into the search engine to optimize query performance.
+- Configure the application to use the search engine for primary query resolution, with database queries as a fallback mechanism in the event of search engine outages.
+- Implement caching for infrequently updated models, such as categories, to enhance performance.
+- Increase test coverage by developing additional test scenarios to ensure comprehensive validation.
+- Develop the frontend using Vue.js or another suitable JavaScript framework.
+- Utilize Docker for local development, and deploy on AWS Fargate, leveraging its container-based infrastructure.
 
