@@ -13,7 +13,7 @@ composer install
 docker run -it --rm -p 7700:7700 getmeili/meilisearch
 ```
 
-- Run migration, seeds, import Website model to search engine
+- Run migration, seeds
 ```console
 php artisan migrate
 php artisan db:seed
