@@ -1,6 +1,5 @@
 ## Set up
-
-- After cloning the project
+After cloning the project
 
 - Make sure to rename the .env.example to .env and set the database connection values.
 
