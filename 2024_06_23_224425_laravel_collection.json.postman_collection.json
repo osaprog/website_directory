@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b198702b-65b0-47ce-b7cd-eeae87ff6e1b",
+		"_postman_id": "94158e5d-248b-4856-aaaf-6361dd535cbf",
 		"name": "2024_06_23_224425_laravel_collection.json",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "10885852"
@@ -36,13 +36,23 @@
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/api/login",
+					"raw": "{{base_url}}/api/login?email=admin@example.com&password=password",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"api",
 						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@example.com"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
 					]
 				}
 			},
