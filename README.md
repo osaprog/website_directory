@@ -1,3 +1,10 @@
+## System requirements
+- PHP 8.2
+- Docker version 25.0.3
+- Composer version 2.2.22
+- Ubuntu or 22.04
+- Postman (optional)
+
 ## Set up
 
 - After cloning the project, run
