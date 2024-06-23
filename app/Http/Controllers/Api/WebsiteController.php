@@ -28,7 +28,7 @@ class WebsiteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function search_engine(Request $request){
-        $websites = Website::search($request->input('search'))
+        $websites = Website::search($request->input('keyword'))
             ->get()
             ->map(function ($website) {
                 return [
@@ -40,7 +40,6 @@ class WebsiteController extends Controller
                     'categories' => $website->categories()->get(),
                 ];
             });
-
         return response()->json(['data' => $websites]);
     }
 
@@ -54,7 +53,9 @@ class WebsiteController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'url' => 'required|url|unique:websites',
-            'categories' => 'required|array', // Assuming categories are submitted as an array of IDs
+            'categories' => 'required|array', //Categories are submitted as an array of IDs
+            'description' => 'required|string',
+            'name' => 'required|string',
         ]);
 
         if ($validator->fails()) {
@@ -112,7 +113,7 @@ class WebsiteController extends Controller
 
         if ($request->has('category_id')) {
             $query->whereHas('categories', function ($q) use ($request) {
-                $q->where('id', $request->category_id);
+                $q->where('category_id', $request->category_id);
             });
         }
 

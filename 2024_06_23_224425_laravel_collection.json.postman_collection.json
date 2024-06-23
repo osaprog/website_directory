@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "b198702b-65b0-47ce-b7cd-eeae87ff6e1b",
+		"name": "2024_06_23_224425_laravel_collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10885852"
+	},
+	"item": [
+		{
+			"name": "api/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/websites",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites/search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/websites/search?rank=true&category_id=2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites",
+						"search"
+					],
+					"query": [
+						{
+							"key": "rank",
+							"value": "true"
+						},
+						{
+							"key": "category_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites/search_engine",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/websites/search_engine?keyword=forbes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites",
+						"search_engine"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "forbes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|pmkG7b5QHkXznnQQ2fvifMJMUnA5UhBxqA7NPoaz1e907379",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "http://example.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Example",
+							"type": "text"
+						},
+						{
+							"key": "categories[0]",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "categories[1]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/websites",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites/{website}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|pmkG7b5QHkXznnQQ2fvifMJMUnA5UhBxqA7NPoaz1e907379",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/websites/:website",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites",
+						":website"
+					],
+					"variable": [
+						{
+							"key": "website",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites/{website}/vote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|pmkG7b5QHkXznnQQ2fvifMJMUnA5UhBxqA7NPoaz1e907379",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/websites/:website/vote",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites",
+						":website",
+						"vote"
+					],
+					"variable": [
+						{
+							"key": "website",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/websites/{website}/unvote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/websites/:website/unvote",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"websites",
+						":website",
+						"unvote"
+					],
+					"variable": [
+						{
+							"key": "website"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost"
+		}
+	]
+}

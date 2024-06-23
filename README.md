@@ -84,7 +84,7 @@ php artisan serve
 
 - import the postman collection from 
 
-storage/app/postman/2024_06_21_231019_laravel_collection.json.postman_collection.json
+2024_06_23_224425_laravel_collection.json.postman_collection.json
 
 - Access search without login
 
