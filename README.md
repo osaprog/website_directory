@@ -8,10 +8,11 @@
 ```console
 composer install
 ```
-- Spin up meilisearch search engine docker container
+- Spin up meilisearch search engine docker container (Import step before running migrate command)
 ```console
 docker run -it --rm -p 7700:7700 getmeili/meilisearch
 ```
+
 - Run migration, seeds, import Website model to search engine
 ```console
 php artisan migrate
