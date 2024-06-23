@@ -22,6 +22,7 @@ php artisan db:seed
 ```console
 php artisan scout:import "App\Models\Website"
 ```
+Other usefull commands, but make sure to run the import afterwards
 - Delete Model from Search Engine
 ```console
 php artisan scout:flush "App\Models\Website"
