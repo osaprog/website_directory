@@ -6,19 +6,20 @@
 - Postman (optional)
 
 ## Set up
-
-- After cloning the project, run
+After cloning the project
 
 - Make sure to rename the .env.example to .env and set the database connection values.
 
+#### Run the following
 ```console
 composer install
 ```
-- Spin up meilisearch search engine docker container
+- Spin up meilisearch search engine docker container (Import step before running migrate command)
 ```console
 docker run -it --rm -p 7700:7700 getmeili/meilisearch
 ```
-- Run migration, seeds, import Website model to search engine
+
+- Run migration, seeds
 ```console
 php artisan migrate
 php artisan db:seed
@@ -28,6 +29,7 @@ php artisan db:seed
 ```console
 php artisan scout:import "App\Models\Website"
 ```
+Other usefull commands, but make sure to run the import afterwards
 - Delete Model from Search Engine
 ```console
 php artisan scout:flush "App\Models\Website"
