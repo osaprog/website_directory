@@ -68,7 +68,9 @@ php artisan scout:index "App\Models\Website"
 ```
 
 #### Testing
-- create database testing_database;
+~~~sql
+create database testing_database;
+~~~
 - Run tests
 ```console
 php artisan test
