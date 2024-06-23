@@ -78,6 +78,10 @@ php artisan test
 
 #### Run endpints in Postman
 
+```console
+php artisan serve
+```
+
 - import the postman collection from 
 
 storage/app/postman/2024_06_21_231019_laravel_collection.json.postman_collection.json
