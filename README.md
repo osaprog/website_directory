@@ -1,9 +1,10 @@
 ## Set up
 
-- After cloning the project, run
+- After cloning the project
 
 - Make sure to rename the .env.example to .env and set the database connection values.
 
+#### Run the following
 ```console
 composer install
 ```
