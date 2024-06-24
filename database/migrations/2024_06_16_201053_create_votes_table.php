@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('votes', function (Blueprint $table) {
             $table->id();
+            // Indexes votes_website_id_foreign, and votes_user_id_foreign will be created
             $table->foreignId('website_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
